@@ -7,8 +7,6 @@ import Navbar from "./components/Navbar";
 function App() {
   return (
     <div>
-      {/* <Route index path="/" element={<Home />} /> */}
-      {/* <Home /> */}
       <Navbar />
       <Routes>
         <Route index path="/" element={<Home />} />

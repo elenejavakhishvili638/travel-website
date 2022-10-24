@@ -1,9 +1,17 @@
+.fixed-navbar {
+  /* position: relative; */
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
   background-color: black;
+  /* position: fixed; */
 }
 
 .header h1 {
@@ -44,12 +52,50 @@ a {
   margin: 0px;
 }
 
+.display {
+  display: none;
+}
+
 .navbar-content {
   overflow: hidden;
+  /* display: none; */
   background-color: #030009c6;
   /* width: 100%; */
 }
 
 .navbar {
   align-items: center;
+}
+
+@media screen and (min-width: 700px) {
+  /* .navbar-content {
+    overflow: visible;
+  } */
+
+  .fixed-navbar {
+    background-color: black;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+
+  .display {
+    display: flex;
+    /* overflow: visible; */
+    align-items: baseline;
+  }
+
+  .navbar {
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+  }
+
+  .navbar a {
+    padding-right: 10px;
+    cursor: pointer;
+  }
 }

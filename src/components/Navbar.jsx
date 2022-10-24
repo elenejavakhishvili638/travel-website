@@ -25,7 +25,7 @@ function Navbar() {
   }, [isToggle]);
 
   return (
-    <div>
+    <div className="fixed-navbar">
       <div className="header">
         <h1
           onClick={() => {
@@ -42,8 +42,11 @@ function Navbar() {
           )}
         </button>
       </div>
-      <div className="navbar-content" ref={navbarContainer}>
-        <ul className="navbar" ref={link}>
+      <div
+        className={isToggle ? "navbar-content" : "display"}
+        ref={navbarContainer}
+      >
+        <ul className="navbar">
           <Link to="/">Home</Link>
           <Link to="/services">Services</Link>
           <Link to="/products">Products</Link>
@@ -54,3 +57,13 @@ function Navbar() {
 }
 
 export default Navbar;
+
+{
+  /* <div className="navbar-content" ref={navbarContainer}>
+        <ul className="navbar" ref={link}>
+          <Link to="/">Home</Link>
+          <Link to="/services">Services</Link>
+          <Link to="/products">Products</Link>
+        </ul>
+      </div> */
+}
